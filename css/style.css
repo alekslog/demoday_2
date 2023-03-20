@@ -1,0 +1,532 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+/*
+main width : 1440px;
+main bacground color : #e5e5e5;
+dark brown color : #534f54;
+light brown color : #9b7776;
+font-family: 'Manrope', sans-serif; - шрифт цен
+font-family: "Old Standard TT" - шрифт названий
+color #40393B - цвет цен
+font-family: "Old Standard TT", serif - шрифт имен товаров
+*/
+
+:root{
+    /* Основная палитра */
+    --main-bg-color: #e5e5e5;
+    --sale-color: #40393B;
+    --dark-brown-color : #534f54;
+    --light-brown-color : #9b7776;
+
+    /* Шрифты */
+    --cost-font: 'Manrope', sans-serif;
+    --main-font: "Old Standard TT", serif;
+    --paragraph-font: "Montserrat";
+    --product-name-font: "Oranienbaum";
+}
+
+*{
+    box-sizing: border-box; /*Если есть границы, все равно ширина равно указанным %*/
+}
+
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.text-center{
+    text-align: center;
+    line-height: 100px;
+}
+
+h1{
+   font-family: var(--product-name-font);
+   text-align: center;
+   font-weight: normal; 
+}
+
+h2{
+    font-family: var(--main-font);
+}
+
+h3{
+    text-align: center;
+    width: 100%;
+    font-family: var(--main-font);
+    color: #9b7776;
+    font-size: 42px;    
+}
+
+h4{
+    text-align: center;
+    width: 100%;
+    font-family: var(--main-font);
+    color: #9b7776;
+    font-size: 20px;    
+}
+
+p{
+    margin: 0;
+}
+
+/* класс компенсирующий боковые марджины при использовании space-a */
+.row{
+    margin: 0 -1%;
+}
+
+.text-center{
+    text-align: center;
+}
+/* ================================MAIN BG DIFFUSOR PICTURE========================*/
+
+.slider-on-top{
+    /* width: 50%; */
+    /* margin-top: 0; */
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.slider-on-top-bg{    
+    padding-left: 85px;
+    background-image: url(../images/slider_on_top/background_slider.jpg);
+    color: #fff;
+    font-size: 30px;    
+    flex: 0 1 auto;    
+    align-self: auto;
+    background-position-y: -229px;
+    min-height: 650px;
+    background-position: center;
+    background-size: cover;    
+    display: flex;    
+    flex-direction: column;    
+    flex-wrap: wrap;       
+    align-content: stretch;    
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.slider-on-top-bg p {
+    margin: 20px 0;
+    font-family: var(--product-name-font);
+}
+/* ================================END MAIN BG DIFFUSOR PICTURE========================*/
+
+.main-page-paragraph p {
+    background-color: #534f54;
+    color: antiquewhite;
+    font-family: var(--paragraph-font);
+    padding: 10px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+.main-page-paragraph span {
+   font-family: var(--main-font);
+   font-size: 22px;   
+   white-space: nowrap;
+}
+
+/* ===================================DIVIDER============================================ */
+.divider{
+    text-align: center;
+    width: 100%;
+    min-height: 70px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    line-height: 70px;
+    background-color: #fff;
+}
+
+.divider__circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--light-brown-color);
+}
+
+/* ====================================DIVIDER END========================================== */
+
+/* ======================================ADV BLOCK========================================== */
+.adv-block {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.adv-block-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    flex: 0 0 49%;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    
+}
+
+.adv-block-sale{
+    width: 18%;      
+}
+
+.adv-1{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/adv/sale_set.svg);
+    background-size: cover;
+    background-position: center;    
+    margin: 10px auto;
+    text-align: center;
+    overflow: hidden;    
+    color: #0b0a0a;
+    padding-top: 18px;
+    font-size: 19px;
+    font-family: var(--main-font);
+    position: relative;
+    font-weight: bolder;       
+}
+
+.adv-2{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/adv/shoe.svg);
+    background-size: cover;
+    background-position: center;    
+    margin: 10px auto;
+    text-align: center;
+    overflow: hidden;    
+    color: #0b0a0a;
+    padding-top: 18px;
+    font-size: 19px;
+    font-family: var(--main-font);
+    position: relative;
+    font-weight: bolder;       
+}
+
+.adv-1 p{
+    position: absolute;
+    top: 56px;
+    left: 3px;
+}
+
+.adv-1 span {
+    position: absolute;
+    top: 34px;
+    left: 14px;
+}
+
+.adv-2 p{
+    position: absolute;
+    top: 56px;
+    left: 3px;
+}
+
+.adv-2 span {
+    position: absolute;
+    top: 0px;
+    left: 14px;
+}
+
+.adv-block-slogan {
+    width: 54%;
+    text-align: left;
+    min-height: 100px;
+    position: relative;
+}
+
+.adv-block-slogan::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 45px;
+    background: #534f54;
+    position: absolute;
+    right: -14px;
+    top: 27px;
+}
+
+.adv-block-slogan h3 {
+    font-size: 22px;
+    margin: 0;
+    padding-top: 18px;
+    text-align: left;
+}
+
+.adv-block-slogan p {
+    color: #000;
+    font-family: var(--paragraph-font);
+    margin: 5px auto;
+}
+
+.adv-block__price {
+    width: 22%;
+    min-height: 100px;
+    color: var(--light-brown-color);
+    font-family: var(--cost-font);
+    font-size: 24px;
+    line-height: 100px;
+}
+
+.adv-block__price p::before{
+    left: 11px;
+    top: 3px;
+    position: relative;
+    content:"";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 19px;    
+    background-image: url(../images/adv/tag_plus_svgrepo_com.svg);
+    background-size: cover;
+}
+/* ===================================ADV BLOCK END ========================================= */
+
+
+/* ===============================MAIN FRAGRANCE LINES ======================================*/
+.modern-table{    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 1%;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-items: center;
+    background-color: #fff;
+    color: var(--light-brown-color);
+    
+}
+
+.modern-table__item{
+    /* text-align: center; */
+}
+
+
+.modern-table__item img{
+    max-width: 100%;
+    /* height: auto; */
+    text-align: center;
+}
+
+.modern-table__item li{
+    list-style-type: none;
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+
+/* =============================MAIN FRAGRANCE LINES END ======================================*/
+/* =============================MAIL SUBSCRIBE ================================================*/
+.mail-subscrine-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.another-store{
+    background: #fff;    
+    min-height: 100px;
+    padding: 20px;
+}
+
+.annonce-text{
+    font-family: "Old Standard TT";
+    color: #9b7776;
+    font-size: 18px;
+    line-height: 100px;
+}
+
+.annonce-me{
+    cursor: pointer;
+    padding: 20px 30px;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    background-color: var(--light-brown-color);    
+}
+
+.annonce-me:hover{
+    background-color: #534f54;
+}
+
+/* =============================MAIL SUBSCRIBE END ================================================*/
+/*=================================== Адаптивная часть=======================================*/
+
+@media screen and (max-width:960px) {
+    
+    .adv-block{
+        flex-direction: column;
+    }
+
+    .slider-on-top-bg{
+        min-height: 350px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .goods-card .goods-price{
+        padding-bottom: 40px;
+    }
+
+    .block-adv-flex{
+        margin-bottom: 20px;
+    }
+
+    .catalog-flex {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .catalog-filter-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 20px;    
+}
+    .divider{
+    
+    margin-top: 30px;
+    margin-bottom: 30px;    
+    }
+
+    .modern-table{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:768px) {    
+
+    .block-adv-flex{
+        margin-bottom: 20px;
+    }
+
+    .divider{    
+        margin-top: 30px;
+        margin-bottom: 30px;    
+    }
+    
+    .modern-table{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:576px) {   
+        
+    .adv-block-slogan h3{
+        font-size: 16px;
+    }
+
+    .adv-block-slogan p {
+        font-size: 14px;
+    }
+    
+    
+    .block-adv-flex{
+        margin-bottom: 20px;
+    }
+
+    
+    .adv-block-sale{
+        position: absolute;
+        display: none;
+    }
+
+    .adv-block-slogan{
+        width: 60%;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+
+    .adv-block__price{
+        width: 35%;
+    }
+
+    .annonce-text{
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .mail-subscrine-flex{
+        padding: 10px;
+    }
+
+    .catalog-filter-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+
+    .divider{    
+    margin-top: 30px;
+    margin-bottom: 30px;    
+    background-color: #fff;
+    }
+    
+}
+
+
+/* адаптив видео */
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    min-height:560px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.video-container video, .video-container iframe {
+    position: absolute;
+    border: 0;
+    height: 100%;
+    left: 0; 
+    top: 0;
+    width: 100%;
+}
+ 
+@media screen and (max-width: 65.9375em) {
+    .video-container {   
+      min-height:460px;
+      width: 90%;    
+    }
+}
+ 
+@media screen and (max-width:39.9375em) {
+    .video-container {   
+      min-height:240px;
+      width: 100%;   
+    }
+}
+

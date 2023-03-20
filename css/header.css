@@ -1,0 +1,183 @@
+
+.site-header {
+    /* min-height: 100px; */
+    background-color: #fff;
+}
+
+.site-header a {
+    color: var(--light-brown-color);
+    text-decoration: dashed;
+}
+
+.header-nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-nav li {
+    text-decoration: none;
+    float: left;
+    list-style-type: none;
+    margin: 0px 10px;
+    font-family: var(--cost-font);
+    padding-left: 0;
+}
+
+.header-nav a:hover{
+    text-decoration: underline;    
+}
+
+.header-nav-flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    /* background-color: lightpink; */
+    height: 70px;
+}
+
+.icon-logo{
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    
+}
+
+.icon-logo img{
+    height: 28px;
+    width: 134px;
+}
+
+.user-interface{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.user-interface a img {
+    margin-right: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.user-interface a img:hover{
+    border-bottom: 1px solid;
+}
+
+.user-interface .cart{
+    position: relative;
+}
+
+.user-interface a span.cart-counter {
+    content: "10";
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #e5e5e5;
+    color: #fff9f9;
+    top: -17px;
+    left: 5px;
+    text-align: center;
+    border-radius: 100%;
+    color: #9b7776;
+    font-size: 15px;
+}
+
+/*=================================== Адаптивная часть================================================= */
+
+.md-menu-burger{
+    cursor: pointer;
+    display: none;
+    width: 30px;
+    height: 26px;
+    text-align: left;
+    /* margin-top: 31px; */
+    margin-left: 30px;
+}
+
+.md-header-nav{
+    display: none;
+    width: 75%;
+    background: #fff;
+    color: black;
+    position: fixed;
+    left: -75%;
+    top: 0;
+    bottom: 0;    
+    /* cursor: pointer; */
+    /* transition: all ease 0.5s; */
+    z-index: 1000;    
+}
+
+.md-header-nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.md-header-nav ul li{
+    padding: 30px 0;
+    text-decoration: none;
+    float: left;
+    list-style-type: none;    
+    font-family: var(--cost-font);
+    padding-left: 0;
+}
+
+.md-header-nav ul li a:hover{
+    border-bottom: 1px solid;
+}
+
+.overlay-close-adaptive-menu{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    z-index: 900;
+    opacity: 0.5;
+    background-color:#9b7776
+}
+
+/* Адаптивная верстка */
+@media screen and (max-width:960px) {
+    .header-user-icon{
+        display: none;
+    }
+
+    .header-bookmark-icon{
+        display: none;
+    }
+
+    .header-nav{
+        display: none;
+    }
+
+    .md-menu-burger{
+        display: block;
+    }
+
+    .md-header-nav{
+        display: block;
+    }
+
+    .container-privacy-policy{}
+}
+
+/* special for Galaxy Fold owners */
+@media screen and (max-width: 320px){
+    .user-interface a img {
+    margin-right: 7px;    
+    }
+
+    .md-menu-burger{
+        margin-left: 20px;
+    }
+}
